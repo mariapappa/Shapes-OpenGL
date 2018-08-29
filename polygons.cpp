@@ -37,7 +37,7 @@ Lia Dinopulu
 #define BORDEAUX 14
 #define CORAL 15
 #define GREENYELLOW 16
-/////////////////////////////////////////////////////////////////////
+
 int movement=0;
 int flag=0;
 int flag1=0;
@@ -70,7 +70,6 @@ int ptCtr = 0;
 int A,B;
 int numOfRule=-1;
 void addcolor(int color1,float totalcolor[3]);
-/////////////////////////////////////windingnumber/////////////////////////////////////////////////
 
 
 int isLeft(int x, int y, int i, int j)
@@ -226,7 +225,7 @@ void drawsquare(int x1, int y1)
 {
 	int a=5;
 	glColor3f(1.0, 0.0, 0.0);    			//Change the object colors to green
-	glBegin(GL_QUADS);						//Start drawing quads
+	glBegin(GL_QUADS);				//Start drawing quads
 	glVertex2f (-5+(x1+a)*10/600.0, 5-(y1+a)*0.02);
 	glVertex2f (-5+(x1-a)*10/600.0, 5-(y1+a)*0.02);
 	glVertex2f (-5+(x1-a)*10/600.0, 5-(y1-a)*0.02);
@@ -828,27 +827,27 @@ void action()
 	in_action=1;
 	flag=1;
 	glColor3f(0.90 ,0.90 ,0.90);	//Change the object colors to green
-	glBegin(GL_QUADS);				//Start drawing quads
-	glVertex2f(-5,4);				//first coordinate
-	glVertex2f(-5,2);				//second coordinate
-	glVertex2f(-2.5,2);				//third coordinate (now blue)
+	glBegin(GL_QUADS);		//Start drawing quads
+	glVertex2f(-5,4);		//first coordinate
+	glVertex2f(-5,2);		//second coordinate
+	glVertex2f(-2.5,2);		//third coordinate (now blue)
 	glVertex2f(-2.5,4);
 	glEnd();
 
 	glLineWidth(1); 
 	glColor3f(0.0, 0.0, 0.0);
 	glBegin(GL_LINES);
-    glVertex2f(-5,4);
-    glVertex2f(-5,2);
+    	glVertex2f(-5,4);
+    	glVertex2f(-5,2);
 
-    glBegin(GL_LINES);
-    glVertex2f(-5,2);
-    glVertex2f(-2.5,2);
+    	glBegin(GL_LINES);
+    	glVertex2f(-5,2);
+    	glVertex2f(-2.5,2);
 
-    glBegin(GL_LINES);
-    glVertex2f(-2.5,4);
-    glVertex2f(-2.5,2);
-    glEnd(); 
+    	glBegin(GL_LINES);
+    	glVertex2f(-2.5,4);
+    	glVertex2f(-2.5,2);
+    	glEnd(); 
 
 	glColor3f(0,0,0);
 	glRasterPos2f(-4.5,2.23);
@@ -886,33 +885,33 @@ void display()
 		fill(numOfRule);
 	}
 	
-	glBegin(GL_QUADS);				//Start drawing quads
-	glVertex2f(-5,5);				//first coordinate
-	glVertex2f(-5,4);				//second coordinate
-	glVertex2f(-2.5,4);				//third coordinate (now blue)
-	glVertex2f(-2.5,5);				//last coordinate
+	glBegin(GL_QUADS);		//Start drawing quads
+	glVertex2f(-5,5);		//first coordinate
+	glVertex2f(-5,4);		//second coordinate
+	glVertex2f(-2.5,4);		//third coordinate 
+	glVertex2f(-2.5,5);		//last coordinate
 	glEnd();                        //Stop drawing quads
 	
-    glLineWidth(1); 
-    glColor3f(0.0, 0.0, 0.0);
-    glBegin(GL_LINES);
-    glVertex2f(-5, 5);
-    glVertex2f(-2.5, 5);
+    	glLineWidth(1); 
+    	glColor3f(0.0, 0.0, 0.0);
+   	glBegin(GL_LINES);
+    	glVertex2f(-5, 5);
+    	glVertex2f(-2.5, 5);
 
-    glBegin(GL_LINES);
-    glVertex2f(-5, 4);
-    glVertex2f(-2.5, 4);
+    	glBegin(GL_LINES);
+    	glVertex2f(-5, 4);
+    	glVertex2f(-2.5, 4);
 
-    glBegin(GL_LINES);
-    glVertex2f(-5, 5);
-    glVertex2f(-5, 4);
+    	glBegin(GL_LINES);
+    	glVertex2f(-5, 5);
+    	glVertex2f(-5, 4);
 
-    glBegin(GL_LINES);
-    glVertex2f(-2.5, 5);
-    glVertex2f(-2.5, 4);
-    glEnd();
+    	glBegin(GL_LINES);
+    	glVertex2f(-2.5, 5);
+    	glVertex2f(-2.5, 4);
+    	glEnd();
 
-    glColor3f(0,0,0);
+    	glColor3f(0,0,0);
 	glRasterPos2f(-4.5,4.3);
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'A');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'C');
@@ -922,39 +921,39 @@ void display()
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'N');
 
 	glColor3f(0.95 ,0.95 ,0.95);    //Change the object colors to green
-	glBegin(GL_QUADS);				//Start drawing quads
-	glVertex2f(-2.5,5);				//first coordinate
-	glVertex2f(0,5);				//second coordinate
-	glVertex2f(0,4);				//third coordinate (now blue)
-	glVertex2f(-2.5,4);				//last coordinate
+	glBegin(GL_QUADS);		//Start drawing quads
+	glVertex2f(-2.5,5);		//first coordinate
+	glVertex2f(0,5);		//second coordinate
+	glVertex2f(0,4);		//third coordinate 
+	glVertex2f(-2.5,4);		//last coordinate
 	glEnd();                        //Stop drawing quads
 	
-    glLineWidth(1); 
-    glColor3f(0.0, 0.0, 0.0);
-    glBegin(GL_LINES);
-    glVertex2f(-2.5, 5);
-    glVertex2f(0, 5);
+    	glLineWidth(1); 
+    	glColor3f(0.0, 0.0, 0.0);
+    	glBegin(GL_LINES);
+    	glVertex2f(-2.5, 5);
+    	glVertex2f(0, 5);
 
-    glBegin(GL_LINES);
-    glVertex2f(0, 5);
-    glVertex2f(0, 4);
+    	glBegin(GL_LINES);
+    	glVertex2f(0, 5);
+    	glVertex2f(0, 4);
 
-    glBegin(GL_LINES);
-    glVertex2f(0, 4);
-    glVertex2f(-2.5, 4);
+    	glBegin(GL_LINES);
+    	glVertex2f(0, 4);
+    	glVertex2f(-2.5, 4);
 
-    glBegin(GL_LINES);
-    glVertex2f(-2.5, 4);
-    glVertex2f(-2.5, 5);
-    glEnd();
+    	glBegin(GL_LINES);
+    	glVertex2f(-2.5, 4);
+    	glVertex2f(-2.5, 5);
+    	glEnd();
 
-    glColor3f(0,0,0);
+    	glColor3f(0,0,0);
 	glRasterPos2f(-2.5,4.3);
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'L');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'I');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'N');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'E');
-	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, '_');
+	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, ' ');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'C');	
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'O');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'L');
@@ -962,39 +961,39 @@ void display()
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'R');
 
 	glColor3f(0.95 ,0.95 ,0.95);    //Change the object colors to green
-	glBegin(GL_QUADS);				//Start drawing quads
-	glVertex2f(0,5);				//first coordinate
-	glVertex2f(2.5,5);				//second coordinate
-	glVertex2f(2.5,4);				//third coordinate (now blue)
-	glVertex2f(0,4);				//last coordinate
+	glBegin(GL_QUADS);		//Start drawing quads
+	glVertex2f(0,5);		//first coordinate
+	glVertex2f(2.5,5);		//second coordinate
+	glVertex2f(2.5,4);		//third coordinate (now blue)
+	glVertex2f(0,4);		//last coordinate
 	glEnd();                        //Stop drawing quads
 
-    glLineWidth(1); 
-    glColor3f(0.0, 0.0, 0.0);
-    glBegin(GL_LINES);
-    glVertex2f(0, 5);
-    glVertex2f(2.5, 5);
+    	glLineWidth(1); 
+    	glColor3f(0.0, 0.0, 0.0);
+    	glBegin(GL_LINES);
+    	glVertex2f(0, 5);
+    	glVertex2f(2.5, 5);
 
-    glBegin(GL_LINES);
-    glVertex2f(2.5, 5);
-    glVertex2f(2.5, 4);
+    	glBegin(GL_LINES);
+    	glVertex2f(2.5, 5);
+    	glVertex2f(2.5, 4);
 
-    glBegin(GL_LINES);
-    glVertex2f(2.5, 4);
-    glVertex2f(0, 4);
+    	glBegin(GL_LINES);
+    	glVertex2f(2.5, 4);
+    	glVertex2f(0, 4);
 
-    glBegin(GL_LINES);
-    glVertex2f(0, 4);
-    glVertex2f(0, 5);
-    glEnd();
+    	glBegin(GL_LINES);
+    	glVertex2f(0, 4);
+    	glVertex2f(0, 5);
+    	glEnd();
 
-    glColor3f(0,0,0);
+    	glColor3f(0,0,0);
 	glRasterPos2f(0,4.3);
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'F');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'I');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'L');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'L');
-	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, '_');
+	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, ' ');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'C');	
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'O');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'L');
@@ -1002,34 +1001,33 @@ void display()
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'R');
 
 	glColor3f(0.95 ,0.95 ,0.95);    //Change the object colors to green
-	glBegin(GL_QUADS);				//Start drawing quads
-	glVertex2f(2.5,5);				//first coordinate
-	glVertex2f(5,5);				//second coordinate
-	glVertex2f(5,4);				//third coordinate (now blue)
-	glVertex2f(2.5,4);				//last coordinate
+	glBegin(GL_QUADS);		//Start drawing quads
+	glVertex2f(2.5,5);		//first coordinate
+	glVertex2f(5,5);		//second coordinate
+	glVertex2f(5,4);		//third coordinate
+	glVertex2f(2.5,4);		//last coordinate
 	glEnd();                        //Stop drawing quads
 	
-    glLineWidth(1); 
-    glColor3f(0.0, 0.0, 0.0);
-    glBegin(GL_LINES);
-    glVertex2f(2.5, 5);
-    glVertex2f(5, 5);
+    	glLineWidth(1); 
+    	glColor3f(0.0, 0.0, 0.0);
+    	glBegin(GL_LINES);
+    	glVertex2f(2.5, 5);
+    	glVertex2f(5, 5);
 
-    glBegin(GL_LINES);
-    glVertex2f(5, 5);
-    glVertex2f(5, 4);
+    	glBegin(GL_LINES);
+    	glVertex2f(5, 5);
+    	glVertex2f(5, 4);
 
-    glBegin(GL_LINES);
-    glVertex2f(5, 4);
-    glVertex2f(2.5, 4);
+    	glBegin(GL_LINES);
+    	glVertex2f(5, 4);
+    	glVertex2f(2.5, 4);
 
-    glBegin(GL_LINES);
-    glVertex2f(2.5, 4);
-    glVertex2f(2.5, 5);
-    glEnd();
-
+    	glBegin(GL_LINES);
+    	glVertex2f(2.5, 4);
+    	glVertex2f(2.5, 5);
+    	glEnd();
 	
-    glColor3f(0,0,0);
+    	glColor3f(0,0,0);
 	glRasterPos2f(3,4.3);
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'R');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'U');
@@ -1039,7 +1037,6 @@ void display()
 
 	shapes();
 	move1();
-
 	glFlush();	
 }
 
@@ -1048,27 +1045,27 @@ void display()
 void line_color()
 {
 	glColor3f(0.90 ,0.90 ,0.90);	//Change the object colors to green
-	glBegin(GL_QUADS);				//Start drawing quads
-	glVertex2f(-2.5,4);				//first coordinate
-	glVertex2f(0,4);				//second coordinate
-	glVertex2f(0,-4);				//third coordinate (now blue)
+	glBegin(GL_QUADS);		//Start drawing quads
+	glVertex2f(-2.5,4);		//first coordinate
+	glVertex2f(0,4);		//second coordinate
+	glVertex2f(0,-4);		//third coordinate 
 	glVertex2f(-2.5,-4);
 	glEnd();
 
 	glLineWidth(1); 
 	glColor3f(0.0, 0.0, 0.0);
 	glBegin(GL_LINES);
-    glVertex2f(-2.5,4);
-    glVertex2f(-2.5,-4);
+    	glVertex2f(-2.5,4);
+    	glVertex2f(-2.5,-4);
 
-    glBegin(GL_LINES);
-    glVertex2f(0,4);
-    glVertex2f(0,-4);
+    	glBegin(GL_LINES);
+    	glVertex2f(0,4);
+    	glVertex2f(0,-4);
 
-    glBegin(GL_LINES);
-    glVertex2f(0,-4);
-    glVertex2f(-2.5,-4);
-    glEnd(); 
+    	glBegin(GL_LINES);
+    	glVertex2f(0,-4);
+    	glVertex2f(-2.5,-4);
+    	glEnd(); 
 
 	glColor3f(0,0,0);
 	glRasterPos2f(-2.5,3.57);
@@ -1140,7 +1137,6 @@ void line_color()
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 't');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'e');
 
-
 	glColor3f(0,0,0);
 	glRasterPos2f(-2.5,-1.00);
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'B');
@@ -1170,7 +1166,6 @@ void line_color()
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'a');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'u');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'x');
-
 
 	glColor3f(0,0,0);
 	glRasterPos2f(-2.5,-2.47);
@@ -1217,35 +1212,35 @@ void line_color()
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'i');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'n');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'e');	
-	glFlush();
 	
+	glFlush();	
 }
 
 void fill_color()
 {
 
 	glColor3f(0.90 ,0.90 ,0.90);	//Change the object colors to green
-	glBegin(GL_QUADS);				//Start drawing quads
-	glVertex2f(0,4);				//first coordinate
-	glVertex2f(2.5,4);				//second coordinate
-	glVertex2f(2.5,-4);				//third coordinate (now blue)
+	glBegin(GL_QUADS);		//Start drawing quads
+	glVertex2f(0,4);		//first coordinate
+	glVertex2f(2.5,4);		//second coordinate
+	glVertex2f(2.5,-4);		//third coordinate
 	glVertex2f(0,-4);
 	glEnd();
 
 	glLineWidth(1); 
 	glColor3f(0.0, 0.0, 0.0);
 	glBegin(GL_LINES);
-    glVertex2f(0,4);
-    glVertex2f(2.5,4);
+    	glVertex2f(0,4);
+    	glVertex2f(2.5,4);
 
-    glBegin(GL_LINES);
-    glVertex2f(2.5,4);
-    glVertex2f(2.5,-4);
+    	glBegin(GL_LINES);
+    	glVertex2f(2.5,4);
+    	glVertex2f(2.5,-4);
 
-    glBegin(GL_LINES);
-    glVertex2f(2.5,-4);
-    glVertex2f(0,-4);
-    glEnd(); 
+    	glBegin(GL_LINES);
+    	glVertex2f(2.5,-4);
+    	glVertex2f(0,-4);
+    	glEnd(); 
 
 	glColor3f(0,0,0);
 	glRasterPos2f(0,3.57);
@@ -1348,7 +1343,6 @@ void fill_color()
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'u');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'x');
 
-
 	glColor3f(0,0,0);
 	glRasterPos2f(0,-2.47);
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'L');
@@ -1394,34 +1388,34 @@ void fill_color()
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'i');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'n');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'e');
-	glFlush();
 	
+	glFlush();	
 }
 
 void rules(){
 
 	glColor3f(0.90 ,0.90 ,0.90);				//Change the object colors to green
-	glBegin(GL_QUADS);							//Start drawing quads
-	glVertex2f(-2.5,4);							//first coordinate
-	glVertex2f(0,4);							//second coordinate
-	glVertex2f(0,-4);							//third coordinate (now blue)
+	glBegin(GL_QUADS);					//Start drawing quads
+	glVertex2f(-2.5,4);					//first coordinate
+	glVertex2f(0,4);					//second coordinate
+	glVertex2f(0,-4);					//third coordinate
 	glVertex2f(-2.5,-4);
 	glEnd();
 
 	glLineWidth(1); 
 	glColor3f(0.0, 0.0, 0.0);
 	glBegin(GL_LINES);
-    glVertex2f(-2.5,4);
-    glVertex2f(-2.5,-4);
+    	glVertex2f(-2.5,4);
+    	glVertex2f(-2.5,-4);
 
-    glBegin(GL_LINES);
-    glVertex2f(0,4);
-    glVertex2f(0,-4);
+    	glBegin(GL_LINES);
+    	glVertex2f(0,4);
+    	glVertex2f(0,-4);
 
-    glBegin(GL_LINES);
-    glVertex2f(0,-4);
-    glVertex2f(2.5,-4);
-    glEnd(); 
+    	glBegin(GL_LINES);
+    	glVertex2f(0,-4);
+    	glVertex2f(2.5,-4);
+    	glEnd(); 
 
 	glColor3f(0,0,0);
 	glRasterPos2f(2.5,3.57);
@@ -1454,25 +1448,24 @@ void rules(){
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, 'e');
 	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, '4');
 
-	glFlush();
-	
+	glFlush();	
 }
 	
 
 void mouse( int x, int y) 
 {	
-	if(menu==1)
+	if(menu == 1)
 	{
-		if((x<150)&&(x>0))
+		if((x<150) && (x>0))
 	  	{
-			if((y<50)&&(y>0))
+			if((y<50) && (y>0))
 		  	{	
 				action();
 			}
 		}
 		else if((x<300) && (x>150)) 
-    	{
-    		if((y<50)&&(y>0))
+    		{
+    			if((y<50) && (y>0))
 		  	{
 				line_color();
 			}
@@ -1482,23 +1475,23 @@ void mouse( int x, int y)
 			if ((y>0) && (y<50))
 		  	{
 				fill_color();
+        		}
         	}
-        }
-      	else if((x<600) && (x>450))
+      		else if((x<600) && (x>450))
 	  	{
 			if ((y>0) && (y<50))
 		  	{
 				rules();
 			}
-        }	
+        	}	
 	}
 }
 
 
 void init()
 {
-	glClearColor(1,1,1,1);						//Define our background color
-	gluOrtho2D(-5,5,-5,5);						//(NEW) Define our viewing area
+	glClearColor(1,1,1,1);					//Define our background color
+	gluOrtho2D(-5,5,-5,5);					//(NEW) Define our viewing area
 	
 }
 
@@ -1506,17 +1499,15 @@ int main(int argc, char ** argv)
 {
 	printf("Welcome to the polygon game, enjoy! \n");
 	
-	glutInit(&argc, argv);						//Initialize GLUT
+	glutInit(&argc, argv);					//Initialize GLUT
 	glutInitWindowSize(600,500);				//define the window size
 	glutInitWindowPosition(10,50);				//Position the window
-	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);	//Define the drawing mode
-	glutCreateWindow("Shapes");					//Create our window	
-	init();										//initialize our variables
-	glutDisplayFunc(display);					//tell Glut what our display function is
+	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);		//Define the drawing mode
+	glutCreateWindow("Shapes");				//Create our window	
+	init();							//initialize our variables
+	glutDisplayFunc(display);				//tell Glut what our display function is
 	glutMotionFunc(mouseclick);
 	glutMouseFunc(buttonmove);
 	glutPassiveMotionFunc(mouse);
 	glutMainLoop();
 }
-
-
